@@ -2,7 +2,7 @@
 import re
 
 
-def to_camel_case(text):
+def to_camel_case(text: str) -> str:
 
     return re.split("_|-| ", text)[0] + "".join(
         word.title() for word in re.split("_|-| ", text)[1::]
@@ -24,7 +24,7 @@ count_bits = lambda n: bin(n).count("1")
 
 # 4
 
-def digital_root(n):
+def digital_root(n: int) -> int:
 
     return n if n < 10 else digital_root(sum(map(int, str(n))))
 
